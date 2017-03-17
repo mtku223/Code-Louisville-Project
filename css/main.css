@@ -5,6 +5,15 @@ black: #484545
 Light Grey: #f7f7f7
 teal: #65beb4
 
+speakeasy.com colors
+gold: #cca75e
+alternate blue: #8AA9B3
+alt black: #3d3d3a
+grey: #939597
+
+------------*/
+
+@import url('http://weloveiconfonts.com/api/?family=entypo');
 
 /*----- Main CSS -----
 --------------------*/
@@ -45,7 +54,7 @@ header {
 }
 
 a.selected {
-    color: #65beb4;
+    color: #8aa9b3;
     opacity: .8;
 }
 
@@ -62,8 +71,8 @@ a {
 
 a:hover,
 a:focus {
-    color: #65beb4;
-/*    background: #65beb4;*/
+    color: #8aa9b3;
+/*    background: #8aa9b3;*/
     /* rgba backup */
 /*    background: rgba(101, 190, 180, 0.2);*/
     -webkit-border-radius: 4px;
@@ -100,20 +109,24 @@ ul {
 }
 
 .hero {
-    margin-top: 150px;
+    margin-top: 200px;
     left: 0;
     width: 100%;
-    max-height: 340px;
+    max-height: 500px;
 }
 
 .hero_logo {
     position: absolute;
     left: 50%;
     width: 70%;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    font-weight:300;
     z-index: 100;
     transform: translate(-50%, 120%);
     max-height: 235px;
-    max-width: 750px;
+    max-width: 900px;
 }
 
 /* Home Page ------------
@@ -121,14 +134,7 @@ ul {
 
 .info {
     width: 100%;
-    background-image: url(../img/Background.png);
     background-repeat: repeat;    
-}
-
-.bio {
-    padding: 0 15%;
-    text-align: center;
-    font-weight: 600
 }
 
 .bio_container {
@@ -139,16 +145,27 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.bio {
+    padding: 0 10% 30px 10%;
+    text-align: center;
+    font-weight: 600;
+    border: solid #cca75c;
 }
 
 .process {
-    color: #f54b1a; 
+    color: #cca75c; 
 }
 
-.stages h3 {
-    height: 50px;
-    color: #f54b1a;
+div.process {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    border: solid #cca75c;
+    border-bottom: hidden;
 }
 
 .stages {
@@ -156,6 +173,15 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border: solid #cca75c;
+    border-top: hidden;
+}
+
+.stages h3 {
+    height: 50px;
+    color: #cca75c;
 }
 
 .steps {
@@ -171,7 +197,6 @@ ul {
     background-position: bottom;
 */
 }
-
 .steps img {
     height: 100px;
 }
@@ -183,20 +208,121 @@ ul {
     backface-visibility: visible;
 }
 
-input, button, submit {
+input[type="submit"], button, submit {
     border: none;
-    margin-top: 15px;
+/*    margin-top: 15px;*/
     width: 400px;
     height: 40px;
     color: white;
     font-size: 13pt;
     font-weight: 600;
-    background-color: #65beb4;
+    background-color: #cca75c;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover, button:hover, submit:hover {
+    background-color: #8AA9B3;
+    border: solid 3px #cca75c;
+    cursor: pointer;
+}
+
+/* Instagram feed ------------
+----------------------------------*/
+#instafeed {
+    height: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.insta {
+    padding: 0 -15px;
+    margin: 0 -8px;
+    height: 200px;
+    width: 200px;
+    border-radius: 7%;
+    align-items: center;
+}
+
+/* Email Signup ------------
+----------------------------------*/
+.signup {
+    background-color: #8aa9b3;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+.signup_disc, .signup_disc h2, .signup form{
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.signup_disc h3 {
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+.newsletter {
+    
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 14pt;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: 14pt;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 14pt;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 14pt;
+}
+
+.signup input {
+    width: 250px;
+    height: 62px;
+    font-size: 16pt;
+    padding: 0px 10px;
+    background-color: white;
+}
+
+button[type="submit"] {
+    width: 150px;
+    height: 60px; 
+    margin-left: 15px;
+    margin-top: none;
+    background-color: #cca75c;
 }
 
 
 /* SERVICES PAGE ------------
 ----------------------------------*/
+.fs_container {
+     display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20 20 20;
+    font-size: .8em;
+}
+
+.fs {
+    color: #cca75c;
+    font-size: 2.2em;
+    padding: 0 5;
+    border: solid #cca75c;
+}
 
 .service_img {
     width: 100%;
@@ -211,8 +337,12 @@ input, button, submit {
     height: 320px;
 }
 
+.service_text {
+    border: solid #cca75c;
+}
+
 .srvc_h2 {
-    color: #65beb4;
+    color: #8aa9b3;
 }
 
 .srvc1 {
@@ -235,21 +365,62 @@ input, button, submit {
     background-size: cover;
 }
 
+/* Affordable Page ------------
+----------------------------------*/
+.shirtblock img {
+    width: 300px;
+}
+
 
 /* Media Queries ------------
 ----------------------------------*/
 
 @media (max-width: 600px) {
+    
+    .clearfix {
+        display: inline-block;
+        height: 70px;
+    }
+    
     #logo {
-        Display: block;
-        margin: auto;
-        width: 100%;
-        height: 100px;
+        float: left;
+        width: 65%;
         z-index: 1000;
+        vertical-align: middle;
+    }
+    
+    img#logo {
+        margin-top: 11.5px;
+        max-height: 55px;
+        min-height: 44px;
+    }
+    
+    div#logo {
+        margin-left: 5%;
+        margin-bottom: 5px;;
+    }
+    
+    #hamburger, #cross {
+        color: black;
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 13.5px;
+        margin-right: 5px;
+        background: none;
+        border: solid #cca75c;
+    }
+    
+    #cross {
+        padding: 8px;
+        font-size: 2em;
     }
     .nav {
         text-align: center;
+        background: white;
+        margin-top: 70px;
     }
+    
     li.nav_button {
 /*        display: inline-flex;*/
         /* makes list vertical */
@@ -261,7 +432,12 @@ input, button, submit {
         padding-left: 0;
         margin: 0px;
     }
-    /* services containters and images */
+    
+    img.hero {
+        margin-top: 70px;
+    }
+    
+    /* services page containters and images */
     .service_container {
         height: 350px
     }
@@ -277,6 +453,7 @@ input, button, submit {
         font-size: 9pt;
         background-color: white;
     }
+    
 }
 
 @media (min-width: 600px) {
@@ -338,6 +515,31 @@ input, button, submit {
         left: 27%;
     }
     
+    /*    CSS for Javascript that shrinks nav and header*/
+
+        header.smaller {
+            height: 100px;
+        }
+
+        header.smaller img#logo {
+            width: 250px;
+            -webkit-transition: height 0.5s ease-in-out;
+            -moz-transition: height 0.5s ease-in-out;
+            -ms-transition: height 0.5s ease-in-out;
+            -o-transition: height 0.5s ease-in-out;
+            transition: height 0.5s ease-in-out;
+        }
+
+        header.smaller div#logo {
+            height: 90px;
+        }
+
+        header.smaller nav a {
+            font-size: 9pt;
+        }
+}
+    
+    
     /* Bio stages wrapping */
 /*
     .steps {
@@ -346,7 +548,7 @@ input, button, submit {
 */
     
     
-}
+
 
 @media (min-width: 980px) {
     #logo {
@@ -379,8 +581,8 @@ input, button, submit {
     top: 20px;
     right: 45%;
     max-width: 450px;
-    font-size: 10pt;
-    padding: 10 30 20 30;
+    font-size: 9pt;
+    padding: 0 12 8 12;
     background-color: white;
 }
 
@@ -389,47 +591,32 @@ input, button, submit {
     right: auto;
     left: 45%;
 }
-
-
-/*    CSS for Javascript that shrinks nav and header*/
-
-        header.smaller {
-            height: 100px;
-        }
-
-        header.smaller img#logo {
-            width: 250px;
-            -webkit-transition: height 0.5s ease-in-out;
-            -moz-transition: height 0.5s ease-in-out;
-            -ms-transition: height 0.5s ease-in-out;
-            -o-transition: height 0.5s ease-in-out;
-            transition: height 0.5s ease-in-out;
-        }
-
-        header.smaller div#logo {
-            height: 90px;
-        }
-
-        header.smaller nav a {
-            font-size: 9pt;
-        }
 }
 
 /* FOOTER ------------
 ----------------------------------*/
+.border_break {
+    position: absolute;
+    border-top: 3px solid white;
+    border-top-right-radius: 30px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -1.5px;
+    z-index: 100;
+}
 
 footer {
     background-repeat: repeat;
-    padding: 50px 0;
+    padding: 30px 0;
     width: 100%;
     bottom: 0;
-    background-color: #fff;
+    background-color: #3d3d3a;
+/*    border-top: 5px solid white;*/
     text-align: center;
     z-index: 1005;
 }
 
 footer a {
-    color: #636363;
     font-weight: 400;
     font-size: 13px;
     line-height: 2;
@@ -437,7 +624,7 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-    color: #65beb4;
+    color: #8aa9b3;
     text-decoration: none;
 }
 
@@ -447,82 +634,62 @@ footer .contact-info h1 {
 
 footer .contact-info h1 a {
     font-size: 30px;
-    font-weight: normal;
+    font-weight: 600;
     text-transform: uppercase;
-    color: #65beb4;
+    color: #cca75c;
     margin: 15px;
 }
 
 footer .contact-info h2 {
     font-size: 32px;
-    color: #f54b1a;
+    color: #8aa9b3;
     margin: 10px 0;
     text-align: center;
     line-height: 1;
 }
 
 
-/*
-footer .contact-info h2 a {
-  font-size: 32px;
-  color: #f54b1a;
-  margin: 10px 0;
-  font-family: 'open-sans';
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
-}
-*/
-
 footer .contact-info .email-info {
     font-size: 15px;
 }
 
 footer .contact-info .email-info a {
-    font-size: 10pt;
-    color: #65beb4;
+    font-size: 12pt;
+    font-weight: 600;
+    color: white;
 }
 
 footer .contact-info .email-info a:hover,
 footer .contact-info .email-info a:focus {
-    color: #65beb4;
+    color: #8aa9b3;
 }
 
 footer .address-info {
     font-size: 12px;
+    color: white;
 }
 
-footer .social-icons ul {
-    list-style: none;
-    padding: 0;
+.social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 6px 8px;
+  line-height: 42px;
+  font-family: Entypo;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background: rgba(61, 61, 58,.8);
+  overflow: hidden;
+  cursor: pointer;
 }
 
-footer .social-icons ul li {
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
+.social:hover {
+   background: rgba(204, 167, 92,1);
 }
 
-footer .social-icons ul li a {
-    height: 40px;
-    width: 40px;
-    display: block;
-    background-size: 40px 80px;
-}
-
-footer .social-icons ul li a.facebook {
-    background-image: url(../img/facebook-icon-preview.png)
-}
-
-footer .social-icons ul li a.instagram {
-    background-image: url('//cdn.shopify.com/s/files/1/0974/6316/t/11/assets/satisicon_instagram.png');
-}
-
-footer .social-icons ul li a:hover,
-footer .social-icons ul li a:focus {
-    background-position-y: 40px;
-}
-
+/*
 footer .btn {
     border-radius: 0px;
     height: 40px;
@@ -531,22 +698,24 @@ footer .btn {
     font-weight: 600;
     text-transform: none;
 }
+*/
 
 footer .copyright {
     font-size: 13px;
     line-height: 2;
     padding-top: 0;
-    color: #636363;
+    color: white;
     text-align: center;
 }
 
 footer .copyright a {
-    color: #636363;
+    color: white;
 }
 
 footer .copyright a:hover,
 footer .copyright a:focus {
     text-decoration: none;
+    color: #8aa9b3;
 }
 
 #subscribe_error p {
