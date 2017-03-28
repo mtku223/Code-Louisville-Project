@@ -23,3 +23,5 @@ Added to the instagram feed you will see a navigation respond "on-scroll" in the
 
 ###### Notes:
 There are quite a few unused files in the directory because I didn't not finish a page I would haved liked to include. However, my project should still meet all requirements without the pages referenced in the live site.
+
+The navigation and hamburger menu were created before I completed the Framwork basics class. The way I used Jquery for the navigation allows for the items to be responsive but they do not respond to the resize of a window. They are only responsive on reload. I tried incorporate bootstrap however the layout of the rest of my page changed and I did not have time to edit and troubleshoot, so I reverted by to the older design.
