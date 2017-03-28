@@ -19,3 +19,7 @@ You will see comments throughout, however they are probably not as noticable or 
 #### Front-end Framework:
 This project incorporates multiple jquery and javascript expressions. Within the head of the Index.html you will see a javscript formula that allows for an instagram feed at the bottom of the page.
 Added to the instagram feed you will see a navigation respond "on-scroll" in the js.js file. Also within this file is a Jquery snippet which I edited to make a responsive hamburger menu (made before I new about bootstrap).
+
+
+###### Notes:
+There are quite a few unused files in the directory because I didn't not finish a page I would haved liked to include. However, my project should still meet all requirements without the pages referenced in the live site.
