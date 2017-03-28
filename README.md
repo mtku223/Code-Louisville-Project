@@ -2,6 +2,8 @@
 This website is a prelimenary design for a company website. The company is local louisville t-shirt company that works with varius businesses locally and across the country.
 It was my goal to focus on design and functionality across all platforms. As well as create a website that has important resources for prospective clients.
 
+To visit the site, simply run index.html (I tried to get the website going using github pages but couldn't get it to work, you can see that there is a gh-pages branch).
+
 ## PROJECT REQUIREMENTS AND WHERE THEY CAN BE FOUND
 
 #### HTML FILES: 
