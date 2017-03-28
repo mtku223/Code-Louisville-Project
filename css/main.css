@@ -40,6 +40,7 @@ header {
     /*   border-bottom: solid #cb5211 5px;*/
     width: 100%;
     z-index: 10000;
+    background-color: rgba(255, 255, 255, .9);
     -webkit-box-shadow:0px 2px 2px #808080;
     -moz-box-shadow:0px 2px 2px #808080;
     box-shadow:0px 2px 2px #808080;
@@ -95,6 +96,18 @@ ul {
     padding-left: 0px;
 }
 
+#cross,
+#hamburger {
+    opacity: .8;
+    background-color: rgba(255, 255, 255,.0);
+    color: #cca75c;
+}
+
+#cross {
+    font-size: 30pt;
+    padding-top: 4px;
+}
+
 /*----- HERO IMAGES -----
 --------------------*/
 
@@ -109,7 +122,6 @@ ul {
 }
 
 .hero {
-    margin-top: 200px;
     left: 0;
     width: 100%;
     max-height: 500px;
@@ -124,7 +136,8 @@ ul {
     text-align: center;
     font-weight:300;
     z-index: 100;
-    transform: translate(-50%, 120%);
+    transform: translate(-50%);
+    margin-top: 200;
     max-height: 235px;
     max-width: 900px;
 }
@@ -365,6 +378,117 @@ button[type="submit"] {
     background-size: cover;
 }
 
+/* CONTACT US PAGE------------
+----------------------------------*/
+
+.contact {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { 
+    font:200 "Open Sans", sans-serif;
+}
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+    border: solid #cca75c;
+}
+
+#contact h3 {
+	color: #cca75c;
+	display: block;
+	font-size: 30px;
+	font-weight: 800;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+#contact placeholder {
+    font-size: 10px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:8px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#8AA9B3;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background: none;
+    color: #cca75c;
+    border: solid #cca75c;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+ font-size: 11pt;
+}
+:-moz-placeholder {
+ color:#888;
+ font-size: 10pt;
+}
+::-moz-placeholder {
+ color:#888;
+ font-size: 10pt;
+}
+:-ms-input-placeholder {
+ color:#888;
+ font-size: 10pt;
+}
+
+
 /* Affordable Page ------------
 ----------------------------------*/
 .shirtblock img {
@@ -372,43 +496,72 @@ button[type="submit"] {
 }
 
 
-/* Media Queries ------------
+/*
+----------------------------------
+----------------------------------
+----------------------------------
+----------------------------------
+Media Queries --------------------
 ----------------------------------*/
 
 @media (max-width: 600px) {
     
-    .clearfix {
-        display: inline-block;
-        height: 70px;
-    }
-    
     #logo {
-        float: left;
-        width: 65%;
+        width: 250px;
+    }
+    
+    .nav {
+        font-size: 10pt;
+    }
+    
+    .nav li {
+        margin-left: 7;
+        margin-right: 7;
+    }
+    
+    .hero_logo {
+      margin-top: 140;
+    }
+/*
+    .clearfix {
+        height: 68px;
+    }
+    #logo {
+        Display: block;
+        margin: auto;
+        width: 250px;
+        height: auto;
         z-index: 1000;
-        vertical-align: middle;
     }
-    
-    img#logo {
-        margin-top: 11.5px;
-        max-height: 55px;
-        min-height: 44px;
+    .nav {
+        padding: 0 0 0 0;
+        width: 100%;
+        margin: auto;
+        text-align: center;
     }
-    
-    div#logo {
-        margin-left: 5%;
-        margin-bottom: 5px;;
+    ul {
+        padding-left: 0px;
+        margin: 0px;
     }
-    
-    #hamburger, #cross {
-        color: black;
-        float: right;
-        width: 40px;
-        height: 40px;
-        margin-top: 13.5px;
-        margin-right: 5px;
-        background: none;
-        border: solid #cca75c;
+    li.nav_button {
+        text-align: center;
+        display: inline-block;
+*/
+/*         makes list horizontal */
+/*
+        margin-right: 0;
+    }
+    .nav a {
+        padding: 8px 8px;
+*/
+        /* makes target area bigger */
+        /*
+      color: #333;  rgba backup 
+      color: rgba(255,255,255, 0.8);
+    */
+/*
+        font-size: 9pt;
+        text-align: center;
     }
     
     #cross {
@@ -416,25 +569,27 @@ button[type="submit"] {
         font-size: 2em;
     }
     .nav {
-        text-align: center;
         background: white;
         margin-top: 70px;
     }
     
     li.nav_button {
+*/
 /*        display: inline-flex;*/
         /* makes list vertical */
+/*
         align-items: center;
         margin-right: 0;
         font-size: 10pt;
     }
+*/
     ul {
         padding-left: 0;
         margin: 0px;
     }
     
     img.hero {
-        margin-top: 70px;
+        margin-top: 110px;
     }
     
     /* services page containters and images */
@@ -492,7 +647,7 @@ button[type="submit"] {
     }
     
     .hero {
-        margin-top: 126;
+        margin-top: 135;
     }
     /* services containters and images */
     .service_text {
@@ -537,6 +692,10 @@ button[type="submit"] {
         header.smaller nav a {
             font-size: 9pt;
         }
+    
+    .nav {
+        visibility: visible !important;
+    }
 }
     
     
@@ -568,6 +727,10 @@ button[type="submit"] {
     /* makes target area bigger */
     font-size: 10pt;
 }
+    
+    .hero {
+        margin-top: 148.75;
+    }
 
 
 /* services containters and images */

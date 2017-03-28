@@ -16,7 +16,6 @@ window.onload = init();
 
 // Hamburger menu
 
-
 if ($(window).width() < 600) {
         $( ".cross" ).hide();
         $( ".nav" ).hide();
@@ -39,6 +38,7 @@ if ($(window).width() < 600) {
     $( ".hamburger" ).hide();
     $( ".nav" ).show();
 }
+
 
 
 

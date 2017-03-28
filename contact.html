@@ -1,11 +1,30 @@
 <html> 
   <head>
     <meta charset="utf-8">
-    <title>Matthew Kustes | Photographer</title>
+     <title>Crooked Monkey | Custom Apparel</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Vollkorn:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cssgram-cssgram.netdna-ssl.com/cssgram.min.css">
+    <script type="text/javascript" src="js/instafeed.js-master/instafeed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setLimit(width, size){
+          return Math.floor(width/200);
+        };
+        var widthX = window.innerWidth,
+        small = 500,
+        userFeed = new Instafeed({
+        get: 'user',
+        userId: '4287091103',
+        accessToken: '4287091103.95ce768.9c7d2a639dd94e31a240df10790322ce',
+        template: '<a class="insta_cont" href="{{link}}"><img class="insta" src="{{image}}" /></a>',
+        limit: setLimit(widthX,small),
+        resolution: 'standard_resolution',
+    });
+    console.log(setLimit(widthX,small)); 
+    userFeed.run();
+    </script>
   </head>
 
 <body>
@@ -13,17 +32,18 @@
         <div href="index.html" id="logo">
           <img src="img/Header%20logo.svg" id="logo">
         </div>
+        <button id="hamburger" class="hamburger">&#9776;</button>
+        <button id="cross"class="cross">&#735;</button>
         <nav class="nav">
           <ul>
-                <li class="nav_button"><a href="index.html">ABOUT US</a></li>
+                <li class="nav_button"><a href="index.html">HOME</a></li>
                 <li class="nav_button"><a href="services.html">SERVICES</a></li>
-                <li class="nav_button"><a href="graphic_design.html">GRAPHIC DESIGN</a></li>
-                <li class="nav_button"><a href="client_tools.html">CLIENT TOOLS</a></li>
                 <li class="nav_button"><a href="contact.html" class="selected">CONTACT US</a></li>
                 <li class="nav_button"><a href="http://crookedmonkey.com/">SHOP</a></li>
           </ul>
         </nav>
       </header>
+<main>     
     <div class="container clearfix">
         <div class="hero_container clearfix">
             <img src="img/Hero_Contact.svg" class="hero_logo">
@@ -31,7 +51,37 @@
         </div>
     </div>
     
+    <div class="container contact">  
+  <form id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <h4>Contact us today, and get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Tell me a little bit about your order..." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+ 
+  
+</div>
     
+</main> 
+   
+    <div id="instafeed">
+    </div>
+               
+    
+<!--
 <div class="signup">
     <form action="https://app.hatchbuck.com/onlineForm/submit.php" method="post" name="form_70582315822" accept-charset="utf-8">
         <input type="hidden" name="formID" value="70582315822">
@@ -49,6 +99,7 @@
     <input type="hidden" id="simple_spc" name="simple_spc" value="70582315822-70582315822">
     </form>
     </div>
+-->
     <div class="border_break" ></div>
     <footer>
         <div class="container foot">

@@ -1,0 +1,22 @@
+#logo1 {
+    width: 60%;
+}
+
+.navvy {
+    padding-left: 20%;
+}
+
+/*
+.navvy li {
+    width: 20%;
+}
+*/
+
+.navvy ul {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination-centered {
+    text-align: center;
+}
